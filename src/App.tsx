@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import List from './components/List';
 
 import './styles/todo.scss';
 
@@ -53,21 +54,7 @@ export default function App() {
             <button type="button" onClick={handleAdd}>
                 Add
             </button>
-            <ul>
-                {items.map((item) => {
-                    return (
-                        <li key={item.id}>
-                            <button
-                                type="button"
-                                onClick={() => handleRemove(item.id)}
-                            >
-                                X
-                            </button>{' '}
-                            {item.title}
-                        </li>
-                    );
-                })}
-            </ul>
+            <List items={items} handleRemove={handleRemove} />
         </div>
     );
 }
