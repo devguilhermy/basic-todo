@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: borde-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    margin: 15px;
+
+    h1 {
+    }
+
+    input {
+        margin-top: 10px;
+        margin-right: 5px;
+    }
+
+    ul {
+        list-style: none;
+        margin-top: 20px;
+
+        li {
+            & + li {
+                margin-top: 6px;
+            }
+
+            button {
+                padding: 5px;
+                border-radius: 50%;
+                background-color: darkblue;
+                color: white;
+            }
+        }
+    }
+}
